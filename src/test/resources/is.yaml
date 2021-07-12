@@ -1,0 +1,86 @@
+apiVersion: v1
+items:
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: "2021-07-07T13:42:16Z"
+      generation: 1
+      labels:
+        app: quotesapi
+        app.kubernetes.io/component: quotesapi
+        app.kubernetes.io/instance: quotesapi
+      managedFields:
+        - apiVersion: image.openshift.io/v1
+          fieldsType: FieldsV1
+          fieldsV1:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:openshift.io/generated-by: {}
+              f:labels:
+                .: {}
+                f:app: {}
+                f:app.kubernetes.io/component: {}
+                f:app.kubernetes.io/instance: {}
+          manager: oc
+          operation: Update
+          time: "2021-07-07T13:42:16Z"
+      name: quotesapi
+      namespace: zqjsga-quotes-dev
+      resourceVersion: "80363950"
+      selfLink: /apis/image.openshift.io/v1/namespaces/zqjsga-quotes-dev/imagestreams/quotesapi
+      uid: 93275b73-9ccd-437d-8a7c-ab4c18824ea5
+    spec:
+      lookupPolicy:
+        local: false
+    status:
+      dockerImageRepository: image-registry.openshift-image-registry.svc:5000/zqjsga-quotes-dev/quotesapi
+      publicDockerImageRepository: default-route-openshift-image-registry.apps.eu45.prod.nextcle.com/zqjsga-quotes-dev/quotesapi
+      tags:
+        - items:
+            - created: "2021-07-07T13:42:50Z"
+              dockerImageReference: image-registry.openshift-image-registry.svc:5000/zqjsga-quotes-dev/quotesapi@sha256:680b28722da34dc9a3749f9055877291d7613f576926b253626b8056db6934e9
+              generation: 1
+              image: sha256:680b28722da34dc9a3749f9055877291d7613f576926b253626b8056db6934e9
+          tag: latest
+  - apiVersion: image.openshift.io/v1
+    kind: ImageStream
+    metadata:
+      annotations:
+        openshift.io/image.dockerRepositoryCheck: "2021-07-07T13:42:07Z"
+      creationTimestamp: "2021-07-07T13:42:06Z"
+      generation: 2
+      name: quotesdb
+      namespace: zqjsga-quotes-dev
+      resourceVersion: "80363561"
+      selfLink: /apis/image.openshift.io/v1/namespaces/zqjsga-quotes-dev/imagestreams/quotesdb
+      uid: 7d8a7e6a-4254-4e9b-bbbf-63244dbf9304
+    spec:
+      lookupPolicy:
+        local: false
+      tags:
+        - annotations: null
+          from:
+            kind: DockerImage
+            name: image-registry.openshift-image-registry.svc:5000/openshift/mysql:5.7
+          generation: 2
+          importPolicy: {}
+          name: "5.7"
+          referencePolicy:
+            type: Source
+    status:
+      dockerImageRepository: image-registry.openshift-image-registry.svc:5000/zqjsga-quotes-dev/quotesdb
+      publicDockerImageRepository: default-route-openshift-image-registry.apps.eu45.prod.nextcle.com/zqjsga-quotes-dev/quotesdb
+      tags:
+        - items:
+            - created: "2021-07-07T13:42:07Z"
+              dockerImageReference: image-registry.openshift-image-registry.svc:5000/openshift/mysql@sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+              generation: 2
+              image: sha256:9a781abe7581cc141e14a7e404ec34125b3e89c008b14f4e7b41e094fd3049fe
+          tag: "5.7"
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""
